@@ -1,1 +1,1 @@
-# sports-league
+# graphql-sequelize
