@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     async isValidPassword(password) {
-      return await bcrypt.compare(password, user.password);
+      return await bcrypt.compare(password, this.password);
     }
   };
   User.init({
@@ -36,6 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
+    tableName: 'Users',
     modelName: 'User',
     underscored: true,
     timestamps: true
